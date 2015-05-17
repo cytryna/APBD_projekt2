@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Strona">
+            <div id="Naglowek">
+                <div id="Baner">
+                    <div id="logo"></div>
+                    <div id="tytul">
+                        ASP.NET          
+                    </div>
+                </div>
+            </div>
+            <div id="Tresc">
+                <div id="lewy">
+                    Menu<br />
+                </div>
+                <div id="prawy">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="stopka">
+                    Autor Radosław Wichrowski
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

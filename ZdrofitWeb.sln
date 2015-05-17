@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ZdrofitWeb", "http://localhost:23108", "{00DCEF87-E73B-4F0A-A777-7B55A8A3391E}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_23108"
+		Debug.AspNetCompiler.PhysicalPath = "D:\projektyVisualStudio\ZdrofitWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_23108\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_23108"
+		Release.AspNetCompiler.PhysicalPath = "D:\projektyVisualStudio\ZdrofitWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_23108\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "D:\projektyVisualStudio\ZdrofitWeb\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00DCEF87-E73B-4F0A-A777-7B55A8A3391E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00DCEF87-E73B-4F0A-A777-7B55A8A3391E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -6,8 +6,6 @@
 <head runat="server">
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
     <style type="text/css">
         .auto-style1 {
             text-align: center;
@@ -27,7 +25,13 @@
             </div>
             <div id="Tresc">
                 <div id="lewy">
-                    Menu<br/>
+                    
+                    <br />
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                    </asp:SiteMapPath>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                    </asp:TreeView>
                 </div>
                 <div id="prawy">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

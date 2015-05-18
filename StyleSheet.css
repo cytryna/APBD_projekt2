@@ -36,7 +36,7 @@
     width: 200px;
     height: 150px;
     float: left;
-    background-image: url('tomato.jpg');
+    background-image: url('aerobics.jpg');
     background-repeat: no-repeat;
 }
 #tytul
@@ -47,4 +47,5 @@
     height: 70px;
     color: #FFFFFF;
     font-size: 60px;
+    background-image: url('fitness.jpg');
 }

@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
 
-  <siteMapNode url="" title="Menu"  description="Menu">
+  <siteMapNode url="Default.aspx" title="Start"  description="Menu">
     <siteMapNode url="" title="Klient"  description="Klient">
       <siteMapNode url="RejestracjaOsob.aspx" title="Rejestracja"  description="Rejestracja" />
+    </siteMapNode>
+    <siteMapNode url="" title="Grafik"  description="Grafik">
+      <siteMapNode url="Grafik.aspx" title="Grafik"  description="Grafik" />
     </siteMapNode>
   </siteMapNode>
 

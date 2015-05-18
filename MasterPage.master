@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -21,7 +22,7 @@
             </div>
             <div id="Tresc">
                 <div id="lewy">
-                    Menu<br />
+                    Menu<br/>
                 </div>
                 <div id="prawy">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

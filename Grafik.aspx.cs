@@ -14,8 +14,7 @@ public partial class Grafik : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection();
 
-        conn.ConnectionString = "Data Source=GR4-0009825\\MSSQLSERVER2;Initial Catalog=fitness;Integrated Security=True";
-
+        conn.ConnectionString = "Data Source=HOMERW\\SQLEXPRESS;Initial Catalog=fitness;Integrated Security=True;User ID=radek;Password=nokia1";
         SqlCommand objSqlCommand = new SqlCommand();
         objSqlCommand.Connection = conn;
         objSqlCommand.CommandType = CommandType.Text;

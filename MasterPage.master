@@ -10,6 +10,9 @@
         .auto-style1 {
             text-align: center;
         }
+        .auto-style2 {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -19,7 +22,7 @@
                 <div id="Baner">
                     <div id="logo"></div>
                     <div id="tytul" class="auto-style1">
-                        Zdrofit - więcej niż fitness          
+                        
                     </div>
                 </div>
             </div>
@@ -36,11 +39,14 @@
                     <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
                     </asp:TreeView>
                 </div>
-                <div id="prawy">
+                <br />
+&nbsp;<div id="prawy">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-                <div id="stopka">
+                <div id="stopka" class="auto-style2">
+                    <p>
+                    Im dłużej zwlekasz tym trudniej zrobić pierwszy krok</p>
                     Autor Radosław Wichrowski
                 </div>
             </div>

@@ -93,6 +93,8 @@
         <RowStyle BackColor="#E3EAEB" />
     </asp:DetailsView>
     <br />
+    <br />
+    <br />
 &nbsp;
 
 </asp:Content>

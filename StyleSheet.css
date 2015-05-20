@@ -40,7 +40,7 @@
     width: 200px;
     height: 150px;
     float: left;
-    background-image: url('aerobics.jpg');
+    background-image: url('company_logo.png');
     background-repeat: no-repeat;
 }
 #tytul
@@ -49,7 +49,7 @@
     background-color: #CC0000;
     margin: 0px 0px 0px 200px;
     height: 70px;
-    color: #FFFFFF;
+    color: #FF0000;
     font-size: 60px;
     background-image: url('fitness.jpg');
 }

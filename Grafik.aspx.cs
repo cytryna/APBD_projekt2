@@ -29,5 +29,10 @@ public partial class Grafik : System.Web.UI.Page
         //this.Label7.Text = (objSqlCommand.ExecuteScalar()).ToString();
         conn.Close();
 
+
+        if (!IsPostBack)
+        {
+            this.MultiView1.SetActiveView(View1);
+        }
     }
 }

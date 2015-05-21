@@ -29,10 +29,10 @@ public partial class Grafik : System.Web.UI.Page
         conn.Close();
 
 
-        if (!IsPostBack)
-        {
-           this.MultiView1.SetActiveView(View1);
-           this.MultiView1.SetActiveView(View2);
-        }
+        //if (!IsPostBack)
+        //{
+        //   this.MultiView1.SetActiveView(View1);
+        //   this.MultiView1.SetActiveView(View2);
+        //}
     }
 }

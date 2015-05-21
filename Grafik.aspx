@@ -17,15 +17,33 @@
                     </asp:DropDownList>
                 </EditItemTemplate>
                 <ItemTemplate>
-                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("dzien_tygodnia") %>'></asp:Label>
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="dzien_tygodnia" DataValueField="id" Enabled="False" SelectedValue='<%# Bind("dzien_tygodnia") %>'>
+                    </asp:DropDownList>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="godzina_od" HeaderText="godzina_od" SortExpression="godzina_od" />
-            <asp:BoundField DataField="godzina_do" HeaderText="godzina_do" SortExpression="godzina_do" />
+            <asp:TemplateField HeaderText="godzina_od" SortExpression="godzina_od">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("godzina_od") %>'></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Błędny format" ValidationExpression="([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])"></asp:RegularExpressionValidator>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("godzina_od") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="godzina_do" SortExpression="godzina_do">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("godzina_do") %>'></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Błędny format" ValidationExpression="([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])"></asp:RegularExpressionValidator>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("godzina_do") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="zajecia" HeaderText="zajecia" SortExpression="zajecia" />
             <asp:BoundField DataField="sala" HeaderText="sala" SortExpression="sala" />
             <asp:BoundField DataField="opis" HeaderText="opis" SortExpression="opis" />
             <asp:BoundField DataField="instruktor_id" HeaderText="instruktor_id" SortExpression="instruktor_id" />
+            <asp:BoundField />
         </Columns>
     </asp:GridView>
     <br />

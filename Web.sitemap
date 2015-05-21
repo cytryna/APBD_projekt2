@@ -6,7 +6,9 @@
       <siteMapNode url="RejestracjaOsob.aspx" title="Rejestracja"  description="Rejestracja" />
     </siteMapNode>
     <siteMapNode url="" title="Grafik"  description="Grafik">
-      <siteMapNode url="Grafik.aspx" title="Grafik"  description="Grafik" />
+      <siteMapNode url="Grafik.aspx" title="Edycja"  description="Grafik Edycja" />
+      <siteMapNode url="Rezerwacja.aspx" title="Rezerwacja"  description="Rezerwacja" />
+      <siteMapNode url="Raport.aspx" title="Raport"  description="Raport" />
     </siteMapNode>
   </siteMapNode>
 

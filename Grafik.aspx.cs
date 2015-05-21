@@ -31,7 +31,8 @@ public partial class Grafik : System.Web.UI.Page
 
         if (!IsPostBack)
         {
-            this.MultiView1.SetActiveView(View1);
+           this.MultiView1.SetActiveView(View1);
+           this.MultiView1.SetActiveView(View2);
         }
     }
 }

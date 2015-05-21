@@ -5,15 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
-
-public partial class Grafik : System.Web.UI.Page
+public partial class Rezerwacja : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        if (!IsPostBack)
+        {
+            this.MultiView1.SetActiveView(View1);
+        }
 
-
-     
     }
 }

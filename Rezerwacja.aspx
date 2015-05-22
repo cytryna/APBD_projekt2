@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Rezerwacja.aspx.cs" Inherits="Rezerwacja" %>
 
-<%@ Register Src="Szuaknie.ascx" TagName="Szuaknie" TagPrefix="uc1" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>"
@@ -65,9 +65,19 @@
             <br />
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             <br />
-            <uc1:Szuaknie ID="Szuaknie1" runat="server" />
+            <p>
+                Podaj fragment nazwiska
+            </p>
+            <p>
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+            </p>
+
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Filtruj" />
+          
             <br />
-            <br />
+            
+
             <asp:GridView ID="GridView3" runat="server" Width="720px" DataSourceID="SqlDataSource4" OnRowCommand="GridView3_RowCommand">
                 <Columns>
                     <asp:ButtonField ButtonType="Button" Text="Zapisz" CommandName="Select" />
@@ -82,6 +92,10 @@
                     <asp:SessionParameter Name="ENAME" SessionField="FragmentNazw" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
+
+            <br />
+            <asp:Label ID="Label5" runat="server" Text="Label" Visible="False"></asp:Label>
+            <asp:Label ID="Label6" runat="server" Text="Label" Visible="False"></asp:Label>
 
         </asp:View>
         <asp:View ID="View3" runat="server">

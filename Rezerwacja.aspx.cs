@@ -28,13 +28,16 @@ public partial class Rezerwacja : System.Web.UI.Page
             grafik = GridView2.Rows[index];
 
             //Label1.Text = "id " + row.Cells[0].Text;
-                // + " " + Server.HtmlDecode(row.Cells[2].Text) + " " + Server.HtmlDecode(row.Cells[3].Text);
+            // + " " + Server.HtmlDecode(row.Cells[2].Text) + " " + Server.HtmlDecode(row.Cells[3].Text);
 
             data = getNajblizszyDzienTygodnia(grafik.Cells[1].Text).ToString("yyyy-MM-dd");
             Label1.Text = "Najbliższy(a) " + grafik.Cells[1].Text + " to " + data;
-            Label2.Text = "Wybierz osobę której dokonasz rezerwacji na zajęcia " + grafik.Cells[4].Text; 
+            Label5.Text = data;
+            Label2.Text = "Wybierz osobę której dokonasz rezerwacji na zajęcia " + grafik.Cells[4].Text;
+            Label6.Text = grafik.Cells[0].Text;
 
             this.MultiView1.SetActiveView(View2);
+            data = getNajblizszyDzienTygodnia(grafik.Cells[1].Text).ToString("yyyy-MM-dd");
         }
     }
 
@@ -94,9 +97,9 @@ public partial class Rezerwacja : System.Web.UI.Page
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "RezerwacjaInsertCommand";
             cmd.Parameters.AddWithValue("@osoba_id", osoba.Cells[1].Text);
-            cmd.Parameters.AddWithValue("@data", "2015-05-25");
+            cmd.Parameters.AddWithValue("@data", Label5.Text);
             cmd.Parameters.AddWithValue("@obecnosc", DBNull.Value);
-            cmd.Parameters.AddWithValue("@grafik_id", 33);
+            cmd.Parameters.AddWithValue("@grafik_id", Label6.Text);
 
             cmd.ExecuteNonQuery();
             con.Close();
@@ -104,9 +107,13 @@ public partial class Rezerwacja : System.Web.UI.Page
             this.MultiView1.SetActiveView(View3);
             Label3.Text = "Zapisano poprawnie ";
         }
-
-        
-
       
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Session["FragmentNazw"] = this.TextBox1.Text;
+        //Response.Redirect("Rezerwacja.aspx");
+        //Response.Redirect("Rezerwacja.aspx?fragmentNazw=" + this.TextBox1.Text);
     }
 }

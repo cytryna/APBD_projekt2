@@ -16,6 +16,6 @@ public partial class Szuaknie : System.Web.UI.UserControl
     {
         Session["FragmentNazw"] = this.TextBox1.Text;
         //Response.Redirect("Rezerwacja.aspx");
-        //Response.Redirect("WynikiWyszukiwaniaPrac.aspx?fragmentNazw="+ this.TextBox1.Text);
+        //Response.Redirect("Rezerwacja.aspx?fragmentNazw=" + this.TextBox1.Text);
     }
 }

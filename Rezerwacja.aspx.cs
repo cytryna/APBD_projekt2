@@ -4,9 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 public partial class Rezerwacja : System.Web.UI.Page
 {
+    private GridViewRow grafik = null;
+    private String data;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -21,14 +25,14 @@ public partial class Rezerwacja : System.Web.UI.Page
         {
             int index = Convert.ToInt32(e.CommandArgument);
 
-            GridViewRow row = GridView2.Rows[index];
+            grafik = GridView2.Rows[index];
 
             //Label1.Text = "id " + row.Cells[0].Text;
                 // + " " + Server.HtmlDecode(row.Cells[2].Text) + " " + Server.HtmlDecode(row.Cells[3].Text);
 
-            
-            Label1.Text = "Najbliższy(a) " + row.Cells[1].Text + " to " + getNajblizszyDzienTygodnia(row.Cells[1].Text).ToString("yyyy-MM-dd");
-            Label2.Text = "Wybierz osobę której dokonasz rezerwacji na zajęcia " + row.Cells[4].Text; 
+            data = getNajblizszyDzienTygodnia(grafik.Cells[1].Text).ToString("yyyy-MM-dd");
+            Label1.Text = "Najbliższy(a) " + grafik.Cells[1].Text + " to " + data;
+            Label2.Text = "Wybierz osobę której dokonasz rezerwacji na zajęcia " + grafik.Cells[4].Text; 
 
             this.MultiView1.SetActiveView(View2);
         }
@@ -70,5 +74,39 @@ public partial class Rezerwacja : System.Web.UI.Page
                 return DayOfWeek.Monday;
         }
 
+    }
+    protected void GridView3_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+
+        if (e.CommandName == "Select")
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+
+            GridViewRow osoba = GridView3.Rows[index];
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=GR4-0009825\\MSSQLSERVER2;Initial Catalog=fitness;Integrated Security=True;User ID=radek;Password=nokia1";
+
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "RezerwacjaInsertCommand";
+            cmd.Parameters.AddWithValue("@osoba_id", osoba.Cells[1].Text);
+            cmd.Parameters.AddWithValue("@data", "2015-05-25");
+            cmd.Parameters.AddWithValue("@obecnosc", DBNull.Value);
+            cmd.Parameters.AddWithValue("@grafik_id", 33);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            this.MultiView1.SetActiveView(View3);
+            Label3.Text = "Zapisano poprawnie ";
+        }
+
+        
+
+      
     }
 }

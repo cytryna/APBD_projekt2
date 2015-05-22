@@ -68,9 +68,9 @@
             <uc1:Szuaknie ID="Szuaknie1" runat="server" />
             <br />
             <br />
-            <asp:GridView ID="GridView3" runat="server" Width="720px" DataSourceID="SqlDataSource4">
+            <asp:GridView ID="GridView3" runat="server" Width="720px" DataSourceID="SqlDataSource4" OnRowCommand="GridView3_RowCommand">
                 <Columns>
-                    <asp:ButtonField ButtonType="Button" Text="Zapisz" />
+                    <asp:ButtonField ButtonType="Button" Text="Zapisz" CommandName="Select" />
                 </Columns>
             </asp:GridView>
             <br />
@@ -78,13 +78,15 @@
 
             <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>"
                 SelectCommand="SELECT [id], [imie], [nazwisko] FROM [osoby] WHERE nazwisko LIKE '%' + @ENAME + '%'">
-                 <SelectParameters>
+                <SelectParameters>
                     <asp:SessionParameter Name="ENAME" SessionField="FragmentNazw" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
 
         </asp:View>
-
+        <asp:View ID="View3" runat="server">
+            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+        </asp:View>
     </asp:MultiView>
 </asp:Content>
 

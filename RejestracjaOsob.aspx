@@ -4,7 +4,7 @@
     <h2 style="color: #3333FF">Przeglądanie, edycja, dodawanie i usuwanie parcowników</h2>
 <br />
     <br />
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>" DeleteCommand="DELETE FROM [osoby] WHERE [id] = @id" InsertCommand="INSERT INTO [osoby] ([imie], [nazwisko], [telefon], [mail], [data_ur], [data_rej], [data_zatrudnienia]) VALUES (@imie, @nazwisko, @telefon, @mail, @data_ur, @data_rej, @data_zatrudnienia)" SelectCommand="SELECT [id], [imie], [nazwisko], [telefon], [mail], [data_ur], [data_rej], [data_zatrudnienia] FROM [osoby]" UpdateCommand="UPDATE [osoby] SET [imie] = @imie, [nazwisko] = @nazwisko, [telefon] = @telefon, [mail] = @mail, [data_ur] = @data_ur, [data_rej] = @data_rej, [data_zatrudnienia] = @data_zatrudnienia WHERE [id] = @id">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>" DeleteCommand="DELETE FROM [osoby] WHERE [id] = @id" InsertCommand="INSERT INTO [osoby] ([imie], [nazwisko], [telefon], [mail], [data_ur], [data_rej], [data_zatrudnienia]) VALUES (@imie, @nazwisko, @telefon, @mail, @data_ur, @data_rej, @data_zatrudnienia)" SelectCommand="SELECT [id], [imie], [nazwisko], [telefon], [mail], [data_ur], [data_rej], [data_zatrudnienia] FROM [osoby]" UpdateCommand="UPDATE [osoby] SET [imie] = @imie, [nazwisko] = @nazwisko, [telefon] = @telefon, [mail] = @mail, [data_ur] = @data_ur, [data_rej] = @data_rej, [data_zatrudnienia] = @data_zatrudnienia WHERE [id] = @id">
         <DeleteParameters>
             <asp:Parameter Name="id" Type="Int32" />
         </DeleteParameters>

@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>"
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>"
         SelectCommand="get_raport" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
 
     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">

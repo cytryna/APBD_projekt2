@@ -3,7 +3,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>"
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>"
         SelectCommand="SELECT g.id, d.dzien_tygodnia, g.godzina_od, g.godzina_do, 
 	        z.nazwa zajecia, s.nazwa sala, o.imie + ' ' +o.nazwisko instruktor 
             FROM grafik g 
@@ -86,7 +86,7 @@
             <br />
 
 
-            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>"
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>"
                 SelectCommand="SELECT [id], [imie], [nazwisko] FROM [osoby] WHERE nazwisko LIKE '%' + @ENAME + '%'">
                 <SelectParameters>
                     <asp:SessionParameter Name="ENAME" SessionField="FragmentNazw" Type="String" />

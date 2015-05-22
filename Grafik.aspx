@@ -72,11 +72,11 @@
     
 
 
-    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>" SelectCommand="SELECT imie + ' ' +  nazwisko nazw, id FROM osoby WHERE (data_zatrudnienia IS NOT NULL)"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>" SelectCommand="SELECT [id], [nazwa] FROM [sale]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>" SelectCommand="SELECT [id], [nazwa] FROM [zajecia]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>" SelectCommand="SELECT [id], [dzien_tygodnia] FROM [dni_tygodnia]"></asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:fitnessConnectionString %>" DeleteCommand="DELETE FROM [grafik] WHERE [id] = @id" InsertCommand="INSERT INTO [grafik] ([dzien_tygodnia], [godzina_od], [godzina_do], [zajecia], [sala], [opis], [instruktor_id]) VALUES (@dzien_tygodnia, @godzina_od, @godzina_do, @zajecia, @sala, @opis, @instruktor_id)" SelectCommand="SELECT [id], [dzien_tygodnia], [godzina_od], [godzina_do], [zajecia], [sala], [opis], [instruktor_id] FROM [grafik]" UpdateCommand="UPDATE [grafik] SET [dzien_tygodnia] = @dzien_tygodnia, [godzina_od] = @godzina_od, [godzina_do] = @godzina_do, [zajecia] = @zajecia, [sala] = @sala, [opis] = @opis, [instruktor_id] = @instruktor_id WHERE [id] = @id">
+    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>" SelectCommand="SELECT imie + ' ' +  nazwisko nazw, id FROM osoby WHERE (data_zatrudnienia IS NOT NULL)"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>" SelectCommand="SELECT [id], [nazwa] FROM [sale]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>" SelectCommand="SELECT [id], [nazwa] FROM [zajecia]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>" SelectCommand="SELECT [id], [dzien_tygodnia] FROM [dni_tygodnia]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:s10338ConnectionString %>" DeleteCommand="DELETE FROM [grafik] WHERE [id] = @id" InsertCommand="INSERT INTO [grafik] ([dzien_tygodnia], [godzina_od], [godzina_do], [zajecia], [sala], [opis], [instruktor_id]) VALUES (@dzien_tygodnia, @godzina_od, @godzina_do, @zajecia, @sala, @opis, @instruktor_id)" SelectCommand="SELECT [id], [dzien_tygodnia], [godzina_od], [godzina_do], [zajecia], [sala], [opis], [instruktor_id] FROM [grafik]" UpdateCommand="UPDATE [grafik] SET [dzien_tygodnia] = @dzien_tygodnia, [godzina_od] = @godzina_od, [godzina_do] = @godzina_do, [zajecia] = @zajecia, [sala] = @sala, [opis] = @opis, [instruktor_id] = @instruktor_id WHERE [id] = @id">
         <DeleteParameters>
             <asp:Parameter Name="id" Type="Int32" />
         </DeleteParameters>

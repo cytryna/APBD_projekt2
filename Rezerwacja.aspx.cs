@@ -88,6 +88,7 @@ public partial class Rezerwacja : System.Web.UI.Page
             GridViewRow osoba = GridView3.Rows[index];
 
             SqlConnection con = new SqlConnection();
+            //con.ConnectionString = "Data Source=HOMERW\\SQLEXPRESS;Initial Catalog=fitness;Integrated Security=True";
             //con.ConnectionString = "Data Source=GR4-0009825\\MSSQLSERVER2;Initial Catalog=fitness;Integrated Security=True;User ID=radek;Password=nokia1";
             con.ConnectionString = "Data Source=db-mssql.pjwstk.edu.pl;Initial Catalog=s10338;Integrated Security=True";
 
